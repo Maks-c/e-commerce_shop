@@ -61,6 +61,7 @@ const ProductImageBox = styled.div`
 
 `
 
+
 const QuantityLabel = styled.span`
   padding: 0 15px;
   display: block;
