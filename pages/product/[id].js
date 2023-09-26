@@ -10,6 +10,7 @@ import Button from "../../components/Button";
 import CartIcon from "../../components/icons/CartIcon";
 import {useContext} from "react";
 import {CartContext} from "../../components/CartContext";
+import FlyingButton from "../../components/FlyingButton";
 
 
 const ColWrapper = styled.div`
@@ -53,11 +54,12 @@ export default function ProductPage({product}){
                         <p> {product.description}</p>
                         <PriceRow>
                             <div><Price>${product.price}</Price></div>
-                            <div><Button primary onClick={() => addProduct(product._id)}> <CartIcon/>Add to
-                                cart</Button></div>
-
+                            <div>
+                                <FlyingButton main _id={product._id} src={product.images?.[0]}>
+                                    <CartIcon/>Add to cart
+                                </FlyingButton>
+                            </div>
                         </PriceRow>
-
                     </div>
                 </ColWrapper>
             </Center>
@@ -69,7 +71,6 @@ export default function ProductPage({product}){
 export async function getServerSideProps(context){
     await mongooseConnect()
     const {id} = context.query
-
     const product = await Product.findById(id);
     return {
         props: {
