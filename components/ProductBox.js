@@ -11,7 +11,10 @@ import FlyingButton from "./FlyingButton";
 import {RevealWrapper} from "next-reveal";
 
 const ProductWrapper = styled.div`
-
+button{
+  width: 100%;
+ justify-content: center;
+}
 `
 
 

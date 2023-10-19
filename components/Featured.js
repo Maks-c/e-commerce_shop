@@ -87,7 +87,7 @@ export default function Featured({product}){
                                     <ButtonLink href={'/product/' + product._id} outline={1} white={1}>
                                         Read more
                                     </ButtonLink>
-                                    <FlyingButton white _id={product._id} src={product.images?.[0]}>
+                                    <FlyingButton white={1} _id={product._id} src={product.images?.[0]}>
                                         <CartIcon/>
                                         Add to cart
                                     </FlyingButton>
@@ -98,8 +98,8 @@ export default function Featured({product}){
                     <Column>
                         <RevealWrapper delay={0}>
                             <img className={'main'}
-                                src="http://res.cloudinary.com/dvr6unyvv/image/upload/v1687028212/max_fiverr/s8umtaod647iruj06zi9.png"
-                                alt=""/>
+                                 src="http://res.cloudinary.com/dvr6unyvv/image/upload/v1687028212/max_fiverr/s8umtaod647iruj06zi9.png"
+                                 alt=""/>
                         </RevealWrapper>
                     </Column>
                 </ColumnsWrapper>

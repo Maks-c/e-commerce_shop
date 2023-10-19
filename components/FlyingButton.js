@@ -42,7 +42,7 @@ export const FlyingButtonWrapper = styled.div`
     position: fixed;
     z-index: 5;
     animation: fly 1s;
-    border-radius:10px ;
+    border-radius: 10px;
 
   }
 `
@@ -55,8 +55,8 @@ export default function FlyingButton(props){
     function sendImageToCart(ev){
 
         imgRef.current.style.display = 'inline-block'
-        imgRef.current.style.left = (ev.clientX-50) + 'px'
-        imgRef.current.style.top = (ev.clientY-50) + 'px'
+        imgRef.current.style.left = (ev.clientX - 50) + 'px'
+        imgRef.current.style.top = (ev.clientY - 50) + 'px'
 
         setTimeout(() => {
             imgRef.current.style.display = 'none'
@@ -65,7 +65,7 @@ export default function FlyingButton(props){
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const reveal = imgRef.current.closest('div[data-sr-id]')
+            const reveal = imgRef.current?.closest('div[data-sr-id]')
             if(reveal?.style.opacity === '1') {
                 //visible
                 reveal.style.transform = 'none'
