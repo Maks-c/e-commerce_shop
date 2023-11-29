@@ -13,13 +13,15 @@ const StyledProductsGrid = styled.div`
 `
 
 
-export default function ProductsGrid({products}){
+export default function ProductsGrid({products, wishedProducts=[]}){
+
+
     return (
         <StyledProductsGrid interval={100}>
             {products?.length > 0 && products.map((product, index) => (
                 // eslint-disable-next-line react/jsx-key
                 <RevealWrapper delay={index * 50} key={product._id}>
-                    <ProductBox  {...product}/>
+                    <ProductBox  {...product} wished={wishedProducts.includes(product._id)}/>
                 </RevealWrapper>
             ))}
         </StyledProductsGrid>
