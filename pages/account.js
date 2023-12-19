@@ -125,7 +125,6 @@ export default function AccountPage(){
                                             <Spinner fullWidth={true}/>
                                         )}
 
-
                                         {orderLoaded && (
                                             <div>
                                                 {orders.length === 0 && (

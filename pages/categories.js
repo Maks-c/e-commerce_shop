@@ -82,11 +82,8 @@ export default function CategoriesPage({mainCategories, categoriesProducts,wishe
                         </CategoryGrid>
                     </CategoryWrapper>
                 ))}
-
             </Center>
-
         </>
-
     )
 }
 
@@ -108,13 +105,7 @@ export async function getServerSideProps(ctx){
         categoriesProducts[mainCat._id] = products
     }
 
-
     console.log(allFetchedProductsId)
-
-    //
-    // Object.values(categoriesProducts).map(catProducts => allFetchedProductsId.push(catProducts))
-    //
-    // console.log(allFetchedProductsId)
 
     const session =  await getServerSession(ctx.req, ctx.res, authOptions)
     const wishedProducts = session?.user? await WishedProduct.find({
