@@ -132,7 +132,7 @@ export default function AccountPage(){
                                                 )}
                                                 {orders.length > 0 && orders.map(o => (
                                                     // eslint-disable-next-line react/jsx-key
-                                                    <SingleOrder {...o}/>
+                                                    <SingleOrder key={o._id} {...o}/>
                                                 ))}
                                             </div>
                                         )}

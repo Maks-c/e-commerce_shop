@@ -52,9 +52,6 @@ const ColumnsWrapper = styled.div`
     }
 
     & > div:nth-child(2) {
-      border: 1px solid red
-    }
-
     img {
       max-width: 100%;
     }
@@ -81,17 +78,16 @@ const CenterImg = styled.div`
 `
 
 const ImgColumn = styled(Column)`
-
   & > div {
     width: 100%;
   }
 `
 
-
-const ContentWrapper = styled.div`
-
-
-`
+//
+// const ContentWrapper = styled.div`
+//
+//
+// `
 
 
 export default function Featured({product}){
@@ -103,7 +99,7 @@ export default function Featured({product}){
                     <Column>
                         <div>
                             <RevealWrapper origin={'left'} delay={0}>
-                                <ContentWrapper>
+                                <div>
                                     <Title>{product.title}</Title>
                                     <Desc>
                                         {product.description}
@@ -117,7 +113,7 @@ export default function Featured({product}){
                                             Add to cart
                                         </FlyingButton>
                                     </ButtonsWrapper>
-                                </ContentWrapper>
+                                </div>
                             </RevealWrapper>
                         </div>
                     </Column>
